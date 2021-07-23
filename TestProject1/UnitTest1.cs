@@ -20,6 +20,20 @@ namespace TestProject1
         {
             var result = target.Add(1,2);
             Assert.AreEqual(4, result, "It is wrong");
+            // With Package
+            // More readable
+            //result.Should().Be(4);
         }
+
+        [Test]
+        public void Test2()
+        {
+            var result = target.Add(100, 2);
+            Assert.AreEqual(102, result, "It is wrong");
+            // With Package
+            // More readable
+            //result.Should().Be(4);
+        }
+
     }
 }
