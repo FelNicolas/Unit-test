@@ -16,10 +16,14 @@ namespace TestProject1
         }
 
         [Test]
-        public void Test1()
+        [TestCase (1, 2, 3)]
+        [TestCase (19, 3, 22)]
+        [TestCase (5, 2, 7)]
+        [TestCase (4, 2, 7)]
+        public void Test1(int a, int b, int expectedResult)
         {
-            var result = target.Add(1,2);
-            Assert.AreEqual(4, result, "It is wrong");
+            var result = target.Add(a,b);
+            Assert.AreEqual(expectedResult, result, "It is wrong");
             // With Package
             // More readable
             //result.Should().Be(4);
