@@ -5,7 +5,7 @@ namespace TestProject1
 {
     public class Tests
     {
-        public Class1 target; 
+        public Class1 target;
         /// <summary>
         /// It will run the setup first when you run a test
         /// </summary>
@@ -17,13 +17,13 @@ namespace TestProject1
 
         [Test]
         [Category("test1")]
-        [TestCase (1, 2, 3)]
-        [TestCase (19, 3, 22)]
-        [TestCase (5, 2, 7)]
-        [TestCase (4, 2, 7)]
+        [TestCase(1, 2, 3)]
+        [TestCase(19, 3, 22)]
+        [TestCase(5, 2, 7)]
+        [TestCase(4, 2, 7)]
         public void Test1(int a, int b, int expectedResult)
         {
-            var result = target.Add(a,b);
+            var result = target.Add(a, b);
             Assert.AreEqual(expectedResult, result, "It is wrong");
             // With Package
             // More readable
@@ -31,13 +31,10 @@ namespace TestProject1
         }
 
         [Test]
+        [Category("Test2")]
         public void Test2()
         {
-            var result = target.Add(100, 2);
-            Assert.AreEqual(102, result, "It is wrong");
-            // With Package
-            // More readable
-            //result.Should().Be(4);
+            Assert.AreEqual();
         }
 
     }
