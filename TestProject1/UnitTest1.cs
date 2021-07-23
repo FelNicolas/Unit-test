@@ -16,6 +16,7 @@ namespace TestProject1
         }
 
         [Test]
+        [Category("test1")]
         [TestCase (1, 2, 3)]
         [TestCase (19, 3, 22)]
         [TestCase (5, 2, 7)]
